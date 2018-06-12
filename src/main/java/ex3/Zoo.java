@@ -40,7 +40,8 @@ public class Zoo {
 	 * Méthode pour ajouter un animal
 	 * @param animal
 	 */
-
+	
+	//to do coder pour retirer la construction if else if 
 	public void addAnimal(Animal animal){
 		if (animal.getTypeAnimal().equals(TypeAnimal.MAMMIFERE) && (animal.getComportement().equals(CategorieComportement.CARNIVORE))) {
 			zoneCarnivore.addAnimal(animal);

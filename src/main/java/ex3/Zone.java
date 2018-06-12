@@ -12,13 +12,17 @@ public abstract class Zone {
 
 	protected String nomZone;
 	protected List<Animal> animaux;
+	protected TypeAnimal typeAnimal;
+	protected CategorieComportement comportement;
 
 	/**
 	 * constructeur de Zone et crée une liste d'animaux
 	 * @param nomZone
 	 */
-	public Zone (String nomZone) {
+	public Zone (String nomZone, TypeAnimal typeAnimal, CategorieComportement comportement) {
 		this.nomZone = nomZone;
+		this.typeAnimal = typeAnimal;
+		this.comportement = comportement;
 		this.animaux = new ArrayList();
 	}
 		
@@ -38,6 +42,17 @@ public abstract class Zone {
 			System.out.println(an.getNomAnimal());
 		}
 	}
+	
+
+	/**
+	 * booléen pour tester si l'animal va dans tel ou tel zone
+	 * @return accepte
+	 */
+	public boolean AccepteAnimauxZone(){
+		boolean accepte = false;
+		return accepte;
+	}
+	
 
 	/**
 	 * Méthode qui compte les animaux

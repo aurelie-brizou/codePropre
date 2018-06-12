@@ -7,6 +7,12 @@ public class Animal {
 	private CategorieComportement comportement;
 
 
+	/**
+	 * Constructeur d'un animal
+	 * @param nomAnimal
+	 * @param typeAnimal
+	 * @param comportement
+	 */
 	public Animal (String nomAnimal, TypeAnimal typeAnimal, CategorieComportement comportement) {
 		this.nomAnimal = nomAnimal;
 		this.typeAnimal = typeAnimal;
