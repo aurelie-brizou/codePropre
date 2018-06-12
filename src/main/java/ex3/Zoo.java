@@ -6,9 +6,6 @@ public class Zoo {
 
 	private String nom;
 	
-	List<Zone> zones;
-	
-	
 	public Zoo(String nom){
 		this.nom = nom;
 	}
