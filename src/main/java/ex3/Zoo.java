@@ -1,21 +1,46 @@
 package ex3;
 
+import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Représente un zoo
+ * @author Aurélie-B
+ */
 public class Zoo {
 
-	private String nom;
-	
-	public Zoo(String nom){
-		this.nom = nom;
+	private String nomZoo;
+	private List<Zone> zones;
+
+	/**
+	 * constructeur de Zoo, crée une liste de zones et instancie les différentes zones
+	 * @param nomZoo
+	 */
+	public Zoo(String nomZoo){
+		this.nomZoo = nomZoo;
+		this.zones = new ArrayList<Zone>();
+		this.zones.add(new ZoneCarnivore("Zone carnivore"));
+		this.zones.add(new SavaneAfricaine("Savane Africaine"));
+		this.zones.add(new FermeReptile("Ferme Reptile"));
+		this.zones.add(new Aquarium("Aquarium"));
 	}
-	
+
+	/**
+	 * Méthode pour afficher tous les animaux par zone
+	 */
+	public void afficherListeAnimaux(){
+		for (Zone typeZone : zones) {
+			typeZone.afficherListeAnimaux();	
+		}
+	}
+
+
 
 	/**
 	 * Méthode pour ajouter un animal
 	 * @param animal
 	 */
-	
+
 	public void addAnimal(Animal animal){
 		if (animal.getTypeAnimal().equals(TypeAnimal.MAMMIFERE) && (animal.getComportement().equals(CategorieComportement.CARNIVORE))) {
 			zoneCarnivore.addAnimal(animal);
@@ -30,54 +55,4 @@ public class Zoo {
 			aquarium.addAnimal(animal);
 		}
 	}
-	
-	public void afficherListeAnimaux(){
-		savaneAfricaine.afficherListeAnimaux();
-		zoneCarnivore.afficherListeAnimaux();
-		fermeReptile.afficherListeAnimaux();
-		aquarium.afficherListeAnimaux();
-	}
-
-	/** Getter for nom
-	 * @return the nom
-	 */
-	public String getNom() {
-		return nom;
-	}
-
-	/** Setter
-	 * @param nom the nom to set
-	 */
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
-
-	public ZoneCarnivore getZoneCarnivore() {
-		return zoneCarnivore;
-	}
-
-	public void setZoneCarnivore(ZoneCarnivore zoneCarnivore) {
-		this.zoneCarnivore = zoneCarnivore;
-	}
-
-	public FermeReptile getFermeReptile() {
-		return fermeReptile;
-	}
-
-	public void setFermeReptile(FermeReptile fermeReptile) {
-		this.fermeReptile = fermeReptile;
-	}
-
-	public Aquarium getAquarium() {
-		return aquarium;
-	}
-
-	public void setAquarium(Aquarium aquarium) {
-		this.aquarium = aquarium;
-	}
-
-	public SavaneAfricaine getSavaneAfricaine() {
-		return savaneAfricaine;
-	}
-
 }
