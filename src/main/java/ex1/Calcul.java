@@ -1,21 +1,25 @@
 package ex1;
 
-
+/**
+ * Représente des calculs
+ * @author Aurelie-B
+ */
 public class Calcul {
 
+
 	/**
-	 * 2 entiers en arguments
-	 * Additionner  
-	 * @author Aurelie-B
+	 * @param a
+	 * @param b
+	 * @return résultat d'une addition de 2 entiers
 	 */
 	public int addition (int a, int b) {
 		return a+b;
 	}
 	
 	/**
-	 * 2 entiers en arguments
-	 * Soustraire 
-	 * @author Aurelie-B
+	 * @param a
+	 * @param b
+	 * @return résultat d'une soustraction de 2 entiers
 	 */
 	public int soustraction (int a, int b) {
 		return a-b;
