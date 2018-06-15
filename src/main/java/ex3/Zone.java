@@ -45,11 +45,17 @@ public abstract class Zone {
 	
 
 	/**
-	 * booléen pour tester si l'animal va dans tel ou tel zone
+	 * booléen pour tester si l'animal va dans telle ou telle zone
 	 * @return accepte
 	 */
-	public boolean AccepteAnimauxZone(){
+	public boolean AccepteAnimauxZone(Animal animal){
 		boolean accepte = false;
+		if (animal.getTypeAnimal().equals(this.getTypeAnimal()) && (animal.getComportement().equals(this.getComportement()))) {
+			accepte = true;
+		} else if () {
+			
+		}
+		
 		return accepte;
 	}
 	
@@ -63,6 +69,62 @@ public abstract class Zone {
 	}
 
 	public abstract double calculerKgsNourritureParJour();
+
+	/**
+	 * @return the nomZone
+	 */
+	public String getNomZone() {
+		return nomZone;
+	}
+
+	/**
+	 * @param nomZone the nomZone to set
+	 */
+	public void setNomZone(String nomZone) {
+		this.nomZone = nomZone;
+	}
+
+	/**
+	 * @return the animaux
+	 */
+	public List<Animal> getAnimaux() {
+		return animaux;
+	}
+
+	/**
+	 * @param animaux the animaux to set
+	 */
+	public void setAnimaux(List<Animal> animaux) {
+		this.animaux = animaux;
+	}
+
+	/**
+	 * @return the typeAnimal
+	 */
+	public TypeAnimal getTypeAnimal() {
+		return typeAnimal;
+	}
+
+	/**
+	 * @param typeAnimal the typeAnimal to set
+	 */
+	public void setTypeAnimal(TypeAnimal typeAnimal) {
+		this.typeAnimal = typeAnimal;
+	}
+
+	/**
+	 * @return the comportement
+	 */
+	public CategorieComportement getComportement() {
+		return comportement;
+	}
+
+	/**
+	 * @param comportement the comportement to set
+	 */
+	public void setComportement(CategorieComportement comportement) {
+		this.comportement = comportement;
+	}
 
 
 

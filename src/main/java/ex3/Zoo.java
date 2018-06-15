@@ -30,7 +30,12 @@ public class Zoo {
 	 */
 	public void afficherListeAnimaux(){
 		for (Zone typeZone : zones) {
-			typeZone.afficherListeAnimaux();	
+			typeZone.afficherListeAnimaux();
+			
+			
+			/* ctrl shift o import automatique
+			 * zones.forEach (typeZone -> typeZone.afficherListeAnimaux());
+			 * */
 		}
 	}
 
